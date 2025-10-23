@@ -8,7 +8,7 @@ class Pylucene < Formula
     sha256 "fdbdc098de21c6982e61e3264157e03cbdaddc169a2f90cadec8a0ceb2462406"
   end
 
-  depends_on "python"
+  depends_on "python@3.12"
   depends_on "openjdk@21" => :build
 
   def install
