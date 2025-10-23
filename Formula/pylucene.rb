@@ -7,7 +7,7 @@ class Pylucene < Formula
     url "https://dist.apache.org/repos/dist/dev/lucene/pylucene/10.3.0-rc1/pylucene-10.3.0-src.tar.gz"
     sha256 "fdbdc098de21c6982e61e3264157e03cbdaddc169a2f90cadec8a0ceb2462406"
   end
-  revision 2
+  revision 3
 
   depends_on "python@3.12"
   depends_on "openjdk@21" => :build
