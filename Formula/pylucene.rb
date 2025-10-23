@@ -7,7 +7,7 @@ class Pylucene < Formula
     url "https://dist.apache.org/repos/dist/dev/lucene/pylucene/10.3.0-rc1/pylucene-10.3.0-src.tar.gz"
     sha256 "fdbdc098de21c6982e61e3264157e03cbdaddc169a2f90cadec8a0ceb2462406"
   end
-  revision 3
+  revision 4
 
   depends_on "python@3.12"
   depends_on "openjdk@21" => :build
@@ -30,8 +30,7 @@ class Pylucene < Formula
       "JCC=python -m jcc",
       "NUM_FILES=16",
       "LIBRARY_PATH=#{ENV["JCC_JDK"]}/lib:#{ENV["JCC_JDK"]}/lib/server",
-      "INSTALL_OPT=--prefix #{prefix} --install-dir #{packages}",
-      "MODERN_PACKAGING=true"
+      "INSTALL_OPT=--prefix #{prefix} --install-dir #{packages}"
   end
 
   test do
