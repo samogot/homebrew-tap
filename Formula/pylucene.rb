@@ -14,6 +14,7 @@ class Pylucene < Formula
   def install
     ENV["JCC_JDK"] = ENV.fetch("HOMEBREW_JDK", Language::Java.java_home)
     ENV["NO_SHARED"] = "1"
+    ENV["LIBRARY_PATH"]="#{ENV["JCC_JDK"]}/lib:#{ENV["JCC_JDK"]}/lib/server"
     ENV.deparallelize  # the jars must be built serially
     version = Language::Python.major_minor_version "python"
     packages = lib/"python#{version}/site-packages"
