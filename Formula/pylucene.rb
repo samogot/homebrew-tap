@@ -29,6 +29,7 @@ class Pylucene < Formula
       "PYTHON=python",
       "JCC=python -m jcc",
       "NUM_FILES=16",
+      "LIBRARY_PATH=#{ENV["JCC_JDK"]}/lib:#{ENV["JCC_JDK"]}/lib/server",
       "INSTALL_OPT=--prefix #{prefix} --install-dir #{packages}"
       "MODERN_PACKAGING=true"
   end
